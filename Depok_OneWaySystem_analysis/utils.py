@@ -102,11 +102,11 @@ def draw_isoline_compare(center, range_, poly1, poly2):
     gmap.plot(y_s2, x_s2, edge_color='green', edge_width=2, edge_alpha=1, face_color='black', face_alpha=0.5)
     return gmap
     
-def plot_heatmap(df, title=None, cbarlabel='Seconds', fmt='g'):
+def plot_heatmap(df, title=None, cbarlabel='Seconds', fmt='g', cmap='YlGnBu'):
     f, ax = plt.subplots(figsize=(12,12))
 
     #create heatmap
-    sns.heatmap(df, linewidth=.5, ax=ax, annot=True, cmap='YlGnBu', fmt=fmt,
+    sns.heatmap(df, linewidth=.5, ax=ax, annot=True, cmap=cmap, fmt=fmt,
                 cbar_kws={"label": cbarlabel}, annot_kws={"size":12})
 
     #configuring colorbar
